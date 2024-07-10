@@ -2,6 +2,7 @@ import java.util.HashMap;
 
 public class IDandPass {
 
+    //Intializing the HashMap
     //Storing username and password in HashMap
     HashMap<String, String> loginInfo = new HashMap<String, String>();
 
