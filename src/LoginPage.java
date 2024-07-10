@@ -41,6 +41,7 @@ public class LoginPage implements ActionListener {
         userPasswordField.setBounds(125, 150, 200, 25);
 
 
+        //Adding labels and fields to the frame
         frame.add(userIDLabel);
         frame.add(userPassworLabel); 
         frame.add(msgLabel);
