@@ -19,6 +19,7 @@ public class LoginPage implements ActionListener {
     JButton resetButton = new JButton("Reset");
     JTextField userIDField = new JTextField();
     JPasswordField userPasswordField = new JPasswordField();
+    JLabel welcomeSign = new JLabel("Login System");
     JLabel userIDLabel = new JLabel("User ID: ");
     JLabel userPassworLabel = new JLabel("Password: ");
     JLabel msgLabel = new JLabel(""); //Success label
@@ -31,8 +32,12 @@ public class LoginPage implements ActionListener {
 
 
         //Setting bound for User ID label and Password label
+        welcomeSign.setBounds(180,50,100,25);
         userIDLabel.setBounds(65,99,75,25);
         userPassworLabel.setBounds(50,150,75,25);
+
+        welcomeSign.setForeground(Color.MAGENTA);
+        
 
         msgLabel.setBounds(125,250,300,35);
         msgLabel.setFont(new Font(null,Font.ITALIC,25));
@@ -46,10 +51,11 @@ public class LoginPage implements ActionListener {
         loginButton.setBounds(125,200,100,25);
         loginButton.addActionListener(this);
 
-        resetButton.setBounds(225,200,100,25);
+        resetButton.setBounds(230,200,100,25);
         resetButton.addActionListener(this);
 
         //Adding labels and fields to the frame
+        frame.add(welcomeSign);
         frame.add(userIDLabel);
         frame.add(userPassworLabel); 
         frame.add(msgLabel);
