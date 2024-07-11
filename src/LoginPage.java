@@ -4,8 +4,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
-
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,6 +23,7 @@ public class LoginPage implements ActionListener {
     JLabel userPassworLabel = new JLabel("Password: ");
     JLabel msgLabel = new JLabel(""); //Success label
     HashMap<String,String> logininfo = new HashMap<String,String>(); //declarign and initializing the HashMap
+ 
 
     LoginPage(HashMap<String,String> OrigLoginInfo){
 
@@ -58,6 +58,10 @@ public class LoginPage implements ActionListener {
         frame.add(loginButton);
         frame.add(resetButton);
 
+        frame.setTitle("Login System");
+        ImageIcon image = new ImageIcon("src/7067965.png");
+        frame.setIconImage(image.getImage());
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(390,390);
         frame.setLayout(null);
@@ -71,8 +75,6 @@ public class LoginPage implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        msgLabel.setForeground(Color.BLACK);
-            msgLabel.setText("Performing Reset");
         
         //clear out fields when clicking on Reset button
         if(e.getSource()==resetButton){

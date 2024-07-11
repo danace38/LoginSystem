@@ -1,5 +1,6 @@
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -7,6 +8,7 @@ public class WelcomePage {
 
     JFrame frame = new JFrame();
     JLabel welcomeLabel = new JLabel("Welcome!");
+
 
     WelcomePage(String userID){
 
